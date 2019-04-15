@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  title: ' Entorno PROD'
+  appName: 'Training Projects ',
+  entorno: ' (Entorno PROD) '
 };

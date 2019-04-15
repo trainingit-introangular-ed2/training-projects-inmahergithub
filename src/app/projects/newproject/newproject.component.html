@@ -1,0 +1,22 @@
+<input value="Ir a Form de alta"
+       type="button"
+       (click)="formHidden = false" />
+<input value="Cerrar Form de alta"
+       type="button"
+       (click)="formHidden = true" />
+<form [ngClass]="{ 'hidden' : formHidden }">
+  <fieldset>
+    <legend>Formulario de Alta de proyecto</legend>
+    <!-- contenido del alta-->
+    <section>
+      <label for="name"> Nombre del proyecto</label>
+      <input name="proyecto.name"
+             type="text"
+             [(ngModel)]="proyecto.name"
+             placeholder="indique proyecto" />
+      <button class="primary"
+              (click)="this.saveProject()">Guardar</button>
+    </section>
+  </fieldset>
+</form>
+<pre>{{proyecto | json}}</pre>
