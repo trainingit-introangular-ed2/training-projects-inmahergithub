@@ -9,7 +9,6 @@ import { Project } from '../models/project.model';
 })
 export class NewprojectComponent implements OnInit {
   public proyecto: Project;
-  public proyectos: Project[];
 
   constructor() {
     this.proyecto = { id: 0, name: '' };
@@ -19,6 +18,5 @@ export class NewprojectComponent implements OnInit {
   public saveProject() {
     this.proyecto.id = environment.projects.length;
     environment.projects.push({ ...this.proyecto });
-    this.proyectos = environment.projects;
   }
 }
