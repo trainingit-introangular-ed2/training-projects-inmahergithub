@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NewprojectComponent } from './newproject/newproject.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { FichaproyectoComponent } from './viewer-project/fichaproyecto/fichaproyecto.component';
 import { ViewerProjectComponent } from './viewer-project/viewer-project.component';
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'viewerProject',
         component: ViewerProjectComponent
+      },
+      {
+        path: 'viewerProject/:id',
+        component: FichaproyectoComponent
       },
       {
         path: 'NewProject',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../../../../environments/environment';
+import { ProjectService } from '../../../project2/project.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,11 @@ import { environment } from '../../../../environments/environment';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title = environment.appName + environment.entorno;
+  public title: number;
   //environment.title;
-  constructor() {}
+  constructor(private projectService: ProjectService) {
+    this.title = projectService.obtenNumProyectos();
+  }
 
   ngOnInit() {}
 }

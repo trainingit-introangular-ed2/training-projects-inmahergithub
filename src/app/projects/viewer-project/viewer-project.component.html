@@ -1,8 +1,9 @@
 <h1>Mi lista de proyectos</h1>
-<ul *ngIf="projects.length>0; else empty">
+<ul *ngIf="projects.length>0; else sinDatos">
   <li *ngFor="let project of projects">
     <span>{{ project.name }}</span>
+    <a routerLink="{{project.id}}"> [Ver Proyecto]</a>
 
   </li>
 </ul>
-<ng-template #empty> <i>No hay projectos</i> </ng-template>
+<ng-template #sinDatos> <i>No hay projectos</i> </ng-template>

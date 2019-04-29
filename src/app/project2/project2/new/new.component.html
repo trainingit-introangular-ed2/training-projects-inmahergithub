@@ -1,0 +1,17 @@
+<h2> Alta de proyectos </h2>
+<form>
+
+  <section>
+    <label for="PName">Nombre del proyecto</label>
+    <input name="ProyName"
+           type="text"
+           [(ngModel)]="ProyName"
+           placeholder="indique nombre del proyecto" />
+    <button class="primary"
+            (click)="this.guardaProyecto()">Guardar</button>
+  </section>
+  <section>
+    <a (click)="location.back()"
+       class="button"><span class="icon-link"></span> Volver</a>
+  </section>
+</form>

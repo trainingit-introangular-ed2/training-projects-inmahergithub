@@ -9,6 +9,7 @@ import { Project } from '../models/project.model';
 })
 export class NewprojectComponent implements OnInit {
   public proyecto: Project;
+  public formHidden: boolean;
 
   constructor() {
     this.proyecto = { id: 0, name: '' };

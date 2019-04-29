@@ -1,0 +1,13 @@
+<fieldset>
+  <h2>Lista de proyectos registrados</h2>
+  <ul>
+    <li *ngFor="let project of listadoProyectos">
+      <span>{{ project.name }}</span>
+    </li>
+  </ul>
+
+  <a routerLink="nuevo"
+     class="button">
+    <span> Nuevo proyecto</span>
+  </a>
+</fieldset>

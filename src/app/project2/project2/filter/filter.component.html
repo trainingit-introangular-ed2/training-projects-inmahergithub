@@ -1,0 +1,28 @@
+<h2> Buscador de proyectos </h2>
+<form>
+  <fieldset>
+    <section>
+      <label for="IdProy">Id. Proyecto</label>
+      <input name="IdProy"
+             type="number"
+             [(ngModel)]="IdProy"
+             placeholder="introduzca Id" />
+
+
+      <input value="Buscar"
+             type="button"
+             (click)="buscaId.emit(this.IdProy)" />
+
+      <!-- -->
+    </section>
+    <section>
+
+      <h3>
+        <span *ngIf="project.name.length>0; else sinDatos">
+          Proyecto <mark> {{ project.name }} </mark>
+        </span>
+      </h3>
+      <ng-template #sinDatos> <i>sin resultados</i> </ng-template>
+    </section>
+  </fieldset>
+</form>

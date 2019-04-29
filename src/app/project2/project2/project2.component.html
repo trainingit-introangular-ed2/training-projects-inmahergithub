@@ -1,0 +1,7 @@
+<!-- <p> , este es el contenedor= composición de los componentes presentadores</p>-->
+
+<app-dashboard [NumProyectos]="totalProyectos"></app-dashboard>
+<app-list [listadoProyectos]="lstproyectos"></app-list>
+<app-filter (buscaId)="getProyect($event)"
+            [project]="proyecto">
+</app-filter>
