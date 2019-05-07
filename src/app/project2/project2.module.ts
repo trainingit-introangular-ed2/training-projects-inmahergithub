@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Project2RoutingModule } from './project2-routing.module';
@@ -10,6 +11,6 @@ import { Project2Component } from './project2/project2.component';
 
 @NgModule({
   declarations: [Project2Component, NewComponent, DashboardComponent, ListComponent, FilterComponent],
-  imports: [CommonModule, Project2RoutingModule, FormsModule]
+  imports: [CommonModule, Project2RoutingModule, FormsModule, HttpClientModule]
 })
 export class Project2Module {}

@@ -9,11 +9,15 @@ import { ProjectService } from '../../project.service';
 })
 export class NewComponent implements OnInit {
   public ProyName: string;
+  //private urlApi = 'https://api-base.herokuapp.com/api/pub/projects';
+  // @Output() public guardaEnApi = new EventEmitter<string>();
+
   constructor(public location: Location, public project2Service: ProjectService) {}
 
   ngOnInit() {}
 
-  public guardaProyecto() {
-    this.project2Service.saveNewProject(this.ProyName);
+  public guardaProyEnApi() {
+    // this.guardaEnApi.emit( this.ProyName )
+    this.project2Service.saveNewProyInApi(this.ProyName);
   }
 }

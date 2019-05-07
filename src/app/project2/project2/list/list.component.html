@@ -1,11 +1,20 @@
 <fieldset>
-  <h2>Lista de proyectos registrados</h2>
-  <ul>
-    <li *ngFor="let project of listadoProyectos">
-      <span>{{ project.name }}</span>
-    </li>
-  </ul>
-
+  <section>
+    <!--
+    <h2>Lista de proyectos registrados en environment</h2>
+    <ul>
+      <li *ngFor="let projectEnv of listadoProyectos">
+        <span>{{ projectEnv.name }}</span>
+      </li>
+    </ul>
+    -->
+    <h2>Lista de proyectos registrados en API</h2>
+    <ul>
+      <li *ngFor="let projectAPI of lstProyects | async">
+        <span>{{ projectAPI.name }}</span>
+      </li>
+    </ul>
+  </section>
   <a routerLink="nuevo"
      class="button">
     <span> Nuevo proyecto</span>

@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Proyecto2 } from '../../models/project2.model';
 
 @Component({
   selector: 'app-list',
@@ -7,6 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   @Input() public listadoProyectos: object[];
+  //@Input() public lstProyects: object[];
+  @Input() public lstProyects: Observable<Proyecto2[]>;
 
   constructor() {}
 

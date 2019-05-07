@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Proyecto2 } from '../../models/project2.model';
 
@@ -8,10 +9,17 @@ import { Proyecto2 } from '../../models/project2.model';
 })
 export class FilterComponent implements OnInit {
   @Output() public buscaId = new EventEmitter<number>();
+  @Output() public buscaIdAPI = new EventEmitter<number>();
   @Input() public project: Proyecto2;
+  @Input() public projectAPI: Proyecto2;
+
   public IdProy: number;
 
-  constructor() {}
+  constructor(private httpCliente: HttpClient) {}
 
   ngOnInit() {}
+
+  public buscaAPIbyId() {
+    this.buscaIdAPI.emit(this.IdProy);
+  }
 }

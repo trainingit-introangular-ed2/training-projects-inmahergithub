@@ -7,8 +7,12 @@
            type="text"
            [(ngModel)]="ProyName"
            placeholder="indique nombre del proyecto" />
+    <!--
+           <button class="primary"
+            (click)="this.guardaProyecto()">Guardar en Env</button>
+            -->
     <button class="primary"
-            (click)="this.guardaProyecto()">Guardar</button>
+            (click)="guardaProyEnApi()">Guardar en API</button>
   </section>
   <section>
     <a (click)="location.back()"

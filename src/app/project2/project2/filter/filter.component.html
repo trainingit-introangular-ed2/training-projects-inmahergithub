@@ -5,24 +5,22 @@
       <label for="IdProy">Id. Proyecto</label>
       <input name="IdProy"
              type="number"
-             [(ngModel)]="IdProy"
+             [(ngModel)]="this.IdProy"
              placeholder="introduzca Id" />
 
-
-      <input value="Buscar"
+      <input value="Buscar en API"
              type="button"
-             (click)="buscaId.emit(this.IdProy)" />
-
-      <!-- -->
+             (click)="buscaAPIbyId()" />
     </section>
-    <section>
 
+    <section>
       <h3>
-        <span *ngIf="project.name.length>0; else sinDatos">
-          Proyecto <mark> {{ project.name }} </mark>
+        <span *ngIf="this.projectAPI!=undefined && this.projectAPI.name.length>0; else sinDatos">
+          Resultado búsqueda: <mark> {{ this.projectAPI.name }} </mark>
         </span>
       </h3>
       <ng-template #sinDatos> <i>sin resultados</i> </ng-template>
     </section>
   </fieldset>
+
 </form>
