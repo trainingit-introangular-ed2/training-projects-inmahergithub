@@ -5,8 +5,6 @@
 <app-list [listadoProyectos]="lstproyectos"
           [lstProyects]="obsvProyectos">
 </app-list>
-<app-filter (buscaId)="getProyect($event)"
-            [project]="proyecto"
-            (buscaIdAPI)="getProyectAPI($event)"
+<app-filter (buscaIdAPI)="getProyectAPI($event)"
             [projectAPI]="this.pApi">
 </app-filter>
