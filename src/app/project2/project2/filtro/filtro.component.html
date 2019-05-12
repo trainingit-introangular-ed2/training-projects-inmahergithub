@@ -1,0 +1,23 @@
+<form [formGroup]="formfiltro">
+  <label for="Identificador"> Identificador Proyecto</label>
+  <input name="Identificador"
+         formControlName="idProy"
+         type="number" />
+  <span>{{ getError('idProy')}}</span>
+
+  <button (click)="buscaenAPI()"
+          [disabled]="formfiltro.invalid"> Busca Proyecto </button>
+  <section>
+
+    <span *ngIf="this.projectAPIFR!=undefined && this.projectAPIFR.name.length>0; else sinDatos">
+      Resultado búsqueda: <mark> {{ this.projectAPIFR.name }} </mark>
+    </span>
+    <h4>
+      <ng-template #sinDatos> <i>sin resultados</i> </ng-template>
+    </h4>
+
+
+  </section>
+</form>
+
+<!-- Resultado búsqueda: <mark> {{ this.projectAPI.name }} </mark>-->

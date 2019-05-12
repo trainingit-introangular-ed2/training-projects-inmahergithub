@@ -1,3 +1,15 @@
-<p>
+<section>
+  <br>
+  <h3>
+    LLamadas Http realizadas
+  </h3>
+  <ul>
+
+    <li *ngFor="let msg of mensajes$| async| slice:-1">{{ msg | json }}</li>
+
+  </ul>
+</section>
+
+<section>
   That's all folks. CopyRight
-</p>
+</section>

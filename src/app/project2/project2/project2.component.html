@@ -5,6 +5,11 @@
 <app-list [listadoProyectos]="lstproyectos"
           [lstProyects]="obsvProyectos">
 </app-list>
-<app-filter (buscaIdAPI)="getProyectAPI($event)"
+<!--  utilizando formularios reactivos -->
+<app-filtro (buscaIdAPIFR)="getProyectAPI($event)"
+            [projectAPIFR]="this.pApi">
+</app-filtro>
+<!-- sin utilizar formularios reactivos
+  <app-filter (buscaIdAPI)="getProyectAPI($event)"
             [projectAPI]="this.pApi">
-</app-filter>
+</app-filter>-->
